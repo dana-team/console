@@ -1,0 +1,43 @@
+[  {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "storageAutomations",
+      "name": "Storage Automations",
+      "insertBefore": "storage"
+    }
+    
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "nfs",
+      "name": "NFS PVC",
+      "href": "/nfspvc.dana.io~v1alpha1~NfsPvc",
+      "perspective": "admin",
+      "prefixNamespaced": true,
+      "exact": false,
+      "section": "storageAutomations"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
+      "path": ["/k8s/ns/:ns/nfspvc", "/k8s/all-namespaces/nfspvc"],
+      "component": {
+        "$codeRef": "Nfspvc.NfsPvcPage"
+      }
+    }
+  },
+  {
+    "type": "console.page/resource/list",
+    "properties": {
+      "model": {
+        "group": "dana.hns.io",
+        "version": "v1alpha1",
+        "kind": "subnamespace"
+      },
+      "component": { "$codeRef": "Nfspvc.NfsPvcList" }
+    }
+  }
+]

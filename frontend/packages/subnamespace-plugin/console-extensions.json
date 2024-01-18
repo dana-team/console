@@ -1,0 +1,85 @@
+[  {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "wallets",
+      "name": "Wallets",
+      "insertBefore": "storage"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "Subnamespace",
+      "name": "Subnamespace",
+      "href": "/dana.hns.io~v1~Subnamespace",
+      "perspective": "admin",
+      "prefixNamespaced": true,
+      "exact": false,
+      "section": "wallets"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "MigrationHierarchy",
+      "name": "MigrationHierarchy",
+      "href": "/k8s/cluster/dana.hns.io~v1~MigrationHierarchy",
+      "perspective": "admin",
+      "exact": false,
+      "section": "wallets"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "UpdateQuota",
+      "name": "UpdateQuota",
+      "href": "/dana.hns.io~v1~Updatequota",
+      "perspective": "admin",
+      "prefixNamespaced": true,
+      "exact": false,
+      "section": "wallets"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
+      "path": ["/k8s/ns/:ns/subnamespace", "/k8s/all-namespaces/subnamespace"],
+      "component": {
+        "$codeRef": "Subnamespace.SubnamespacePage"
+      }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
+      "path": ["/k8s/ns/:ns/updatequota", "/k8s/all-namespaces/updatequota"],
+      "component": {
+        "$codeRef": "Subnamespace.UpdatequotaPage"
+      }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
+      "path": ["k8s/cluster/dana.hns.io~v1~MigrationHierarchy"],
+      "component": {
+        "$codeRef": "Subnamespace.MigrationHierarchyPage"
+      }
+    }
+  },
+  {
+    "type": "console.page/resource/list",
+    "properties": {
+      "model": {
+        "group": "dana.hns.io",
+        "version": "v1",
+        "kind": "subnamespace"
+      },
+      "component": { "$codeRef": "Subnamespace.SubnamespaceList" }
+    }
+  }
+]

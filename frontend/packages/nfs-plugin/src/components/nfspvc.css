@@ -1,0 +1,9 @@
+.help-block{
+    display: flex;
+}
+
+.help-block svg{
+    margin: 5px;
+    margin-top: 7px;
+    width: 2rem !important;
+}
