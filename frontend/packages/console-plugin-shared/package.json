@@ -22,7 +22,7 @@
   "dependencies": {
     "classnames": "2.x",
     "lodash-es": "^4.17.21",
-    "sanitize-html": "^2.3.2",
+    "sanitize-html": "^2.12.1",
     "showdown": "1.8.6"
   },
   "devDependencies": {
